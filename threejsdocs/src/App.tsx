@@ -23,7 +23,7 @@ function App() {
     scene.add( new THREE.AmbientLight( 0xffffff, 0.9 ) );
     var loader = new GLTFLoader();
     var carmodel:any = null;
-    loader.load("./public/redcar.glb" , function(gltf : any) {
+    loader.load("./redcar.glb" , function(gltf : any) {
       scene.add(gltf.scene);
       carmodel = gltf;
       carmodel.scene.position.y = 0.2;
