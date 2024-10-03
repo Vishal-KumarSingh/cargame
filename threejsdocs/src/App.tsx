@@ -40,7 +40,7 @@ function App() {
 
 
        // Key states
-       const keys:object = {
+       const keys = {
         ArrowUp: false,
         ArrowDown: false,
         ArrowLeft: false,
