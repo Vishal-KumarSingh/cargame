@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect } from 'react'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 function App() {
   //const canvaref = useRef();
@@ -41,7 +40,7 @@ function App() {
 
 
        // Key states
-       const keys = {
+       const keys:object = {
         ArrowUp: false,
         ArrowDown: false,
         ArrowLeft: false,
@@ -72,19 +71,7 @@ function App() {
       // controls.dampingFactor = 0.25; // how quickly the camera dampens movement
       // controls.screenSpacePanning = false; // prevent panning outside the screen
 
-    const geometry = new THREE.PlaneGeometry( 100, 100 ); 
-    const material = new THREE.MeshBasicMaterial( { uniforms: {
-      color1: {
-        value: new THREE.Color("red")
-      },
-      color2: {
-        value: new THREE.Color("purple")
-      }
-     },
-     side: THREE.DoubleSide}
-     ); 
-      const plane = new THREE.Mesh( geometry, material ); 
-     // scene.add( plane );
+     
 
 
       const direction = new THREE.Vector3( 0 , 1 , 0);
