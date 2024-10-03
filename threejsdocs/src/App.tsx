@@ -40,23 +40,24 @@ function App() {
 
 
        // Key states
-       const keys = {
+       type ArrowKeys = 'ArrowUp' | 'ArrowDown' | 'ArrowLeft' | 'ArrowRight';
+       const keys:Record<ArrowKeys, boolean>  = {
         ArrowUp: false,
         ArrowDown: false,
         ArrowLeft: false,
         ArrowRight: false,
       };
-  
+     
       // Update key states on keydown and keyup
-      const handleKeyDown = (event:any) => {
+      const handleKeyDown = (event:KeyboardEvent) => {
         if (keys.hasOwnProperty(event.key)) {
-          keys[event.key] = true;
+          keys[event.key as ArrowKeys] = true;
         }
       };
   
-      const handleKeyUp = (event:any) => {
+      const handleKeyUp = (event:KeyboardEvent) => {
         if (keys.hasOwnProperty(event.key)) {
-          keys[event.key] = false;
+          keys[event.key as ArrowKeys] = false;
         }
       };
   
